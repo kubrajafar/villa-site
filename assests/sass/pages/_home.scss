@@ -1,0 +1,269 @@
+// visit-section start
+#visit-section {
+  .container-main {
+    .visit-container {
+      width: 100%;
+      padding-top: 100px;
+
+      .visit-header {
+        width: 100%;
+        margin-bottom: 30px;
+        h2 {
+          font-size: 15px;
+          color: #b3b3b3;
+          font-family: "arial";
+          letter-spacing: 2px;
+          font-weight: 300;
+        }
+      }
+      .visit-cardsBox {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 28px;
+        .visit-cardBox {
+          width: 100%;
+          .card-img {
+            cursor: pointer;
+            margin-bottom: 10px;
+            img {
+              width: 100%;
+            }
+          }
+          .card-contentBox {
+            .card-header {
+              margin-bottom: 10px;
+              h3 {
+                font-size: 20px;
+                color: #000;
+                font-weight: 300;
+              }
+            }
+            .card-indicators {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              .card-indicators-stars {
+                i {
+                  font-size: 13px;
+                  color: #e61c5d;
+                }
+              }
+              .card-indicators-views {
+                p {
+                  color: #adb5bd;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// visit-section end
+
+// place-section start
+#place-section {
+  .container-main {
+    .place-container {
+      width: 100%;
+      position: relative;
+      bottom: -240px;
+      .place-headerBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 50px;
+        .place-header {
+          max-width: 760px;
+          width: 100%;
+          h2 {
+            font-size: 80px;
+            font-family: "Playfair Display", serif;
+            color: #000;
+            font-weight: 400;
+            line-height: 100px;
+          }
+        }
+        .place-text {
+          max-width: 730px;
+          width: 100%;
+          p {
+            font-size: 18px;
+            font-family: "arial", sans-serif;
+            color: #6c757d;
+            line-height: 30px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
+
+// place-section end
+
+// blog-section start
+#blog-section {
+  background-image: url("../img/round.png.webp");
+
+  .container-main {
+    .blog-container {
+      width: 100%;
+      padding: 370px 0 200px 0;
+      .blog-headerBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 50px;
+        .blog-header {
+          max-width: 760px;
+          width: 100%;
+          h2 {
+            font-size: 80px;
+            font-family: "Playfair Display", serif;
+            color: #000;
+            font-weight: 400;
+            line-height: 100px;
+          }
+        }
+        .blog-text {
+          max-width: 730px;
+          width: 100%;
+          p {
+            font-size: 18px;
+            font-family: "arial", sans-serif;
+            color: #6c757d;
+            line-height: 30px;
+            font-weight: 300;
+          }
+        }
+      }
+      .cardSearch {
+        margin-bottom: 20px;
+      }
+      .blog-cardsBox {
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        align-items: center;
+        justify-content: space-between;
+
+        .blog-card {
+          max-width: 350px;
+          width: 100%;
+          background-color: #fff;
+          margin-bottom: 20px;
+          .card-imgBox {
+            width: 100%;
+            .card-img {
+              width: 100%;
+            }
+          }
+
+          .card-content {
+            padding: 10px 30px;
+            .card-dateText {
+              color: #ced4da;
+              font-size: 16px;
+              font-weight: 200;
+              font-family: "arial" sans-serif;
+            }
+            .card-nameText {
+              font-size: 26px;
+              font-family: "Playfair Display", serif;
+            }
+            .blog-cardBtn {
+              background-color: red;
+              padding: 10px;
+              border: none;
+              border-radius: 6px;
+              color: #fff;
+              margin: 10px 0;
+            }
+          }
+        }
+      }
+      .circleBox {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        button {
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          border: 1px solid #000;
+          cursor: pointer;
+          &.activeBtn {
+            background-color: #000;
+          }
+        }
+      }
+    }
+  }
+}
+// blog-section end
+
+@media screen and (max-width: 992px) {
+  #visit-section {
+    .container-main {
+      .visit-container {
+        .visit-cardsBox {
+          grid-template-columns: auto auto;
+        }
+      }
+    }
+  }
+  #place-section {
+    .container-main {
+      .place-container {
+        .place-headerBox {
+          .place-header {
+            h2 {
+              font-size: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #blog-section {
+    .container-main {
+      .blog-container {
+        .blog-cardsBox {
+          grid-template-columns: auto auto;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  #visit-section {
+    .container-main {
+      .visit-container {
+        .visit-cardsBox {
+          grid-template-columns: auto;
+        }
+      }
+    }
+  }
+  #blog-section {
+    .container-main {
+      .blog-container {
+        .blog-cardsBox {
+          grid-template-columns: auto;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
