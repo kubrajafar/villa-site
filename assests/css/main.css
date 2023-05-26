@@ -50,6 +50,7 @@ header nav .container-main .nav-container .addPage {
   color: #fff;
   cursor: pointer;
   font-family: "arial", sans-serif;
+  margin: 0;
 }
 header nav .container-main .nav-container .nav-hamburger {
   z-index: 2;
@@ -112,6 +113,7 @@ header .header-contentBox {
   flex-direction: column;
   justify-content: center;
   color: #fff;
+  text-align: center;
 }
 header .header-contentBox .header-BigTitleBox {
   font-family: "Playfair Display", serif;
@@ -164,6 +166,15 @@ header .header-contentBox .header-BtnBox .download-btn {
   }
 }
 @media screen and (max-width: 576px) {
+  header nav .container-main .nav-container {
+    padding: 15px 0;
+  }
+  header .header-contentBox .header-BigTitlebox h1 {
+    font-size: 25px;
+  }
+  header .header-contentBox .header-textBox {
+    margin-bottom: 10px;
+  }
   header .header-contentBox .header-BtnBox {
     display: flex;
     flex-direction: column;
@@ -435,4 +446,4 @@ footer .container-main .footer-container .footer-content .footer-icons i {
 }
 #form-section .main-container .form-container {
   padding: 100px 0;
-}/*# sourceMappingURL=main.css.map */
+}

@@ -22,11 +22,11 @@ header {
           font-size: 30px;
           font-weight: bold;
         }
-        .addPage{
+        .addPage {
           color: #fff;
           cursor: pointer;
-      font-family: "arial", sans-serif;
-
+          font-family: "arial", sans-serif;
+          margin: 0;
         }
         .nav-hamburger {
           z-index: 2;
@@ -99,7 +99,7 @@ header {
     flex-direction: column;
     justify-content: center;
     color: #fff;
-
+    text-align: center;
     .header-BigTitleBox {
       font-family: "Playfair Display", serif;
       font-weight: 700;
@@ -162,7 +162,23 @@ header {
 }
 @media screen and (max-width: 576px) {
   header {
+    nav {
+      .container-main {
+        .nav-container {
+          padding: 15px 0;
+        }
+      }
+    }
     .header-contentBox {
+      .header-BigTitlebox{
+        h1{
+          font-size: 25px;
+        }
+        
+      }
+      .header-textBox {
+        margin-bottom: 10px;
+      }
       .header-BtnBox {
         display: flex;
         flex-direction: column;

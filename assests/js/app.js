@@ -3,9 +3,9 @@ const nav_contentBox = document.querySelector(".nav-contentBox");
 
 const blog_cardsBox = document.querySelector(".blog-cardsBox");
 const circleBox = document.querySelector(".circleBox");
-const DeleteBtn = document.querySelector(".blog-cardBtn")
+const DeleteBtn = document.querySelector(".blog-cardBtn");
 
-const searchInput = document.querySelector(".searchInput")
+const searchInput = document.querySelector(".searchInput");
 let cricleBoxChildren = circleBox.children;
 
 let mood = true;
@@ -37,18 +37,16 @@ async function klikBtn() {
       }
 
       for (let i = 0; i < cricleBoxChildren.length; i++) {
-
         cricleBoxChildren[i].addEventListener("click", (e) => {
-          console.log(e.target.id)
-          let targetDiv = +e.target.id * 3
+          let targetDiv = +e.target.id * 3;
           blog_cardsBox.innerHTML = "";
           for (let j = targetDiv; j < targetDiv + 3; j++) {
-
-            console.log(data[j])
             data[j] ? blogData(data[j]) : null;
           }
         });
       }
+
+  
     });
 
   for (let i = 0; i < cricleBoxChildren.length; i++) {
@@ -65,9 +63,7 @@ klikBtn();
 function circleAdd() {
   const btn = document.createElement("button");
 
-  console.log(circleBox.children)
-  btn.id = circleBox.children.length
-
+  btn.id = circleBox.children.length;
 
   circleBox.append(btn);
 }
@@ -87,21 +83,17 @@ function blogData(data) {
   card_img.setAttribute("src", data.img);
   blog_cardBtn.innerText = "Delete";
   blog_cardBtn.onclick = () => {
-    blog_cardBtn.parentElement.parentElement.remove()
+    blog_cardBtn.parentElement.parentElement.remove();
     fetch("http://localhost:3000/data/" + data.id, { method: "delete" })
-      .then(res => res.json())
+      .then((res) => res.json())
       .then(
         fetch("http://localhost:3000/data/", {
           method: "Get",
         })
-          .then(res => res.json)
-          .then(
-            blogData()
-
-          )
-      )
-  }
-
+          .then((res) => res.json)
+          .then(blogData())
+      );
+  };
 
   card_imgBox.classList.add("card-imgBox");
   card_img.classList.add("card-img");
@@ -109,8 +101,7 @@ function blogData(data) {
   card_content.classList.add("card-content");
   blog_cardData.classList.add("card-dateText");
   blog_cardName.classList.add("card-nameText");
-  blog_cardBtn.classList.add("blog-cardBtn")
-
+  blog_cardBtn.classList.add("blog-cardBtn");
 
   blog_cardName.append(blog_cardLink);
   card_content.append(blog_cardData, blog_cardName, blog_cardBtn);
@@ -118,21 +109,5 @@ function blogData(data) {
   blog_card.append(card_imgBox, card_content);
 
   blog_cardsBox.append(blog_card);
-
-
-  searchInput.addEventListener("keyup", (e) => {
-    e.preventDefault()
-    console.log(data);
-    for (let i = 0; i < data.length; i++) {
-
-      if (searchInput.value.toLowerCase() !== blog_cardLink.innerText.toLowerCase()) {
-        data[i].style.display = "none"
-      }
-
-    }
-
-  })
 }
-
-
 
